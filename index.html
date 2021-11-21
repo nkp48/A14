@@ -1,0 +1,28 @@
+<html>
+<head>
+
+  <script type="text/javascript">
+
+    function Cookie_sample() {
+      var now = new Date();
+      now.setMonth(now.getMonth() + 1);
+      cookie1 = escape(document.myform.customer.value) + ";"
+
+      document.cookie = "name=" + cookie1;
+      document.cookie = "expires=" + now.toUTCString() + ";"
+      document.write("Setting up for Cookies : " + "name=" + cookie1);
+    }
+
+
+  </script>
+
+</head>
+<body>
+
+<form name="myform" action="">
+  Enter name: <input type="text" name="customer"/>
+  <input type="button" value="Set Cookie" onClick="Cookie_sample()"/>
+</form>
+
+</body>
+</html>
